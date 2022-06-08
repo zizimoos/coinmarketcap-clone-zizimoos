@@ -4,10 +4,12 @@ import btc from "../assets/btc.png";
 import usdt from "../assets/usdt.png";
 import gainers from "../assets/gainers.png";
 import recent from "../assets/recent.png";
+import Rate from "./cmc-table/rate.js";
 
 const styles = {
   trendingWrapper: `mx-auto max-w-screen-2xl`,
   h1: `text-3xl text-white`,
+  flexCenter: `flex items-center`,
 };
 
 function Trending(props) {
@@ -28,6 +30,27 @@ function Trending(props) {
               }}
             ></button>
           </div>
+        </div>
+        <br />
+        <div className="flex">
+          <p className="text-gray-400">
+            The global crypto market cap is $1.74T,
+          </p>
+          <span>
+            <Rate isIncrement={true} rate="0.53 %" />
+          </span>
+          <p>
+            &nbsp; decrease over the last day.{" "}
+            <span className="underline">Read More</span>
+          </p>
+        </div>
+        <br />
+        <div className={styles.flexCenter}>
+          {/* 
+          <TrendingCard title ="trending" icon={fire} trendingData = {trendingData} />
+          <TrendingCard title ="Biggest Gainer" icon={gainers} trendingData = {trendingData} />
+          <TrendingCard title ="Rencently Added" icon={recent} trendingData = {trendingData} />
+          */}
         </div>
       </div>
     </div>
