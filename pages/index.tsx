@@ -1,17 +1,16 @@
 import type { NextPage } from "next";
 import Header from "../components/header";
 import Trending from "../components/trending";
+import CMCTable from "../components/cmc-table/cmcTable";
 
 const Home: NextPage = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      {/* <Header /> */}
       <div className="mt-10"></div>
-      {/* <Trending /> */}
       <Trending />
       <div className="mt-20"></div>
-      {/* <CMCtable /> */}
+      <CMCTable />
     </div>
   );
 };
